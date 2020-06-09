@@ -1,0 +1,37 @@
+{
+  "name": "eslint-prettier-demo",
+  "version": "1.0.0",
+  "description": "eslint-prettier-demo",
+  "main": "index.js",
+  "scripts": {
+    "precommit": "pretty-quick --staged --pattern src/** && lint-staged",
+    "lint": "eslint ./ --ext .js,.vue",
+    "format": "pretty-quick --pattern \"**/*.*(js|vue)\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhtzjz/eslint-prettier-demo.git"
+  },
+  "keywords": [
+    "eslint",
+    "prettire"
+  ],
+  "author": "zhaohuan <zhaohuan1@360.cn>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhtzjz/eslint-prettier-demo/issues"
+  },
+  "homepage": "https://github.com/zhtzjz/eslint-prettier-demo#readme",
+  "devDependencies": {
+    "@q/sofe-eslint": "^1.0.5",
+    "eslint": "^7.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "prettier": "^2.0.5",
+    "prettier-quick": "0.0.5"
+  },
+  "lint-staged": {
+    "*.js": "eslint"
+  },
+  "pre-commit": "npm run precommit"
+}
